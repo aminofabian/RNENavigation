@@ -11,7 +11,7 @@ export default function SettingsScreen({ route }) {
 
       <TouchableOpacity style={styles.button} onPress={() => {
         navigation.navigate("Profile", {
-          name: "Fabian",
+          name: 'Settings Fabian',
         })
       }}>
         <Text style={styles.buttonText}>Go to Profile</Text>
@@ -23,7 +23,9 @@ export default function SettingsScreen({ route }) {
 const styles = StyleSheet.create({
   button: {
     marginHorizontal: 20,
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+    borderRadius: 10,
     backgroundColor: 'blue',
     alignSelf: 'center',
     width: 100,

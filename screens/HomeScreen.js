@@ -1,10 +1,11 @@
 import { View, Text, Button, StyleSheet } from 'react-native';
 import React from 'react';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen({ navigation, route }) {
+  const { name } = route.params;
   return (
     <View>
-      <Text>HomeScreen</Text>
+      <Text>HomeScreen {name}</Text>
 
       <Button style={styles.button} title='Go to Profile' onPress={() => {
         navigation.navigate('Profile', {

@@ -14,7 +14,7 @@ export default function App() {
       <Stack.Navigator id={1} initialRouteName="Settings" >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Notifications" component={Notifications} />
-        <Stack.Screen name="Profile" component={Profile} headerShown='false' />
+        <Stack.Screen name="Profile" component={Profile} headerShown='false' initialParams={{ name: 'Guest' }} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
