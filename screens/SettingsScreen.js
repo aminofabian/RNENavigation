@@ -16,6 +16,14 @@ export default function SettingsScreen({ route }) {
       }}>
         <Text style={styles.buttonText}>Go to Profile</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("Notifications", {
+          name: 'Notifications', 
+        })
+      }}>
+        <Text style={styles.buttonText}>Notifications</Text>
+      </TouchableOpacity>
     </View>
   );
 }

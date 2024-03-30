@@ -1,4 +1,4 @@
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 export default function HomeScreen({ navigation, route }) {
@@ -17,6 +17,16 @@ export default function HomeScreen({ navigation, route }) {
         navigation.navigate('Settings')
       }} />
 
+      <TouchableOpacity title='update name' style={styles.button} onPress={() => {
+        navigation.setParams(
+          {
+            name: 'Zelisline'
+          }
+        )
+      }} >
+        <Text style={styles.buttonText}>Update Name</Text>
+      </TouchableOpacity>
+
     </View>
   )
 }
@@ -24,11 +34,18 @@ export default function HomeScreen({ navigation, route }) {
 
 const styles = StyleSheet.create({
   button: {
-    margin: 20,
+    marginVertical: 5,
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+    borderRadius: 10,
     backgroundColor: 'blue',
-    color: 'white',
     alignSelf: 'center',
     width: 100,
+
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
 
   }
 })
